@@ -8,7 +8,7 @@ RUN npm install
 
 COPY . .
 
-RUN chmod +x node_modules/.bin/vite
+RUN chmod -R 755 node_modules
 
 EXPOSE 3000
 
