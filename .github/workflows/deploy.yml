@@ -1,0 +1,18 @@
+name:  Deploy to EC2
+  on:
+    push:
+      branches: [main]
+  jobs:
+    deploy:
+      runs-on: ubuntu-latest
+      steps:
+        -name: Deploy to EC2
+          uses: appleboy/ssh-action@master
+          with:
+            host: 172.31.6.152
+            username: ubuntu
+            key: ${{ secrets.EC2_KEY }}
+            script: |
+              cd /home/ubuntu/vesta
+              docker-compose down
+              docker-compose up -d --build
