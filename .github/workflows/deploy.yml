@@ -16,6 +16,6 @@ jobs:
           username: ubuntu
           key: ${{ secrets.EC2_KEY }}
           script: |
-            cd /home/ubuntu/vesta
-            docker compose down
-            docker compose up -d --build
+            cd /home/ubuntu/uptor-batch05-jeyakumar-projectvesta
+            docker-compose down
+            docker-compose up -d --build
