@@ -1,0 +1,145 @@
+.navFooterVerticalRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 20px;
+  background: #1a559e;
+  align-items: flex-start;
+  padding-top: 0;
+}
+
+.navFooterLinkCol {
+  width: 22%;
+  color: white;
+}
+
+.navFooterColHead {
+  font-weight: bold;
+  margin-bottom: 6px;
+  font-size: 18px;
+  color: #fff;
+  text-align: left;
+  width: 100%;
+}
+
+.nav_a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.nav_a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .navFooterVerticalRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navFooterLinkCol {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+footer {
+  width: 100%;
+  background: #232F3E;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  left: 0;
+  z-index: 1000;
+  font-size: 16px;
+  padding-top: 4px;
+  padding-bottom: 8px;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 12px 0 18px 0;
+  background-color: #f1f1f1;
+}
+
+.social-icon {
+  font-size: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #0077ff;
+}
+
+footer ul {
+  padding: 0;
+  margin: 8px 0;
+  text-align: left;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+footer ul li {
+  list-style: none;
+  margin: 3px 0;
+  padding: 0;
+  text-align: left;
+}
+
+footer p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.25;
+}
+
+.footer-container {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  text-align: left;
+  padding: 0 20px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.footer-col p {
+  margin: 4px 0;
+  cursor: pointer;
+}
+
+.footer-col p:hover {
+  text-decoration: underline;
+}
+
+.footer-social {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icon {
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  opacity: 0.7;
+}
