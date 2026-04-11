@@ -11,7 +11,7 @@ export default function ChatBox() {
 
         const userMessage = { text: input, sender: "user" };
 
-        // ✅ add user message
+        
         setMessages(prev => [...prev, userMessage]);
 
         try {
@@ -25,7 +25,7 @@ export default function ChatBox() {
 
             const data = await res.json();
 
-            // ✅ add bot reply
+            
             setMessages(prev => [
                 ...prev,
                 { text: data.reply || "No reply from server ⚠️", sender: "bot" }
@@ -45,12 +45,12 @@ export default function ChatBox() {
 
     return (
         <>
-            {/* 💬 Floating Button */}
+            
             <div style={styles.icon} onClick={() => setIsOpen(!isOpen)}>
                 <img src={ladyicon} alt="chat" style={styles.iconImage} />
             </div>
 
-            {/* 📦 Chat Box */}
+        
             {isOpen && (
                 <div style={styles.container}>
                     <div style={styles.header}>

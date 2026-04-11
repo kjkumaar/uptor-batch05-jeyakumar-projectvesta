@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import LoginIcon from '@mui/icons-material/Login';
-import { useNavigate, useLocation } from 'react-router-dom'; // ✅ IMPORTS
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Badge } from '@mui/material';
 import { useContext } from 'react';
@@ -40,8 +40,8 @@ function ResponsiveAppBar() {
   const { setLoggedIn } = useContext(LoginContext);
   const isDark = theme === "dark";
 
-  const navigate = useNavigate();       // ✅ Initialize navigate
-  const location = useLocation();       // ✅ Initialize location
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleOpenNavMenu = (event) => setAnchorElNav(event.currentTarget);
   const handleOpenUserMenu = (event) => setAnchorElUser(event.currentTarget);
@@ -144,7 +144,7 @@ function ResponsiveAppBar() {
                 <ShoppingCartIcon />
               </Badge>
             </IconButton>
-            
+
             <div>
               <div
                 onClick={toggleTheme}
@@ -201,13 +201,17 @@ function ResponsiveAppBar() {
                   onClick={() => {
                     handleCloseUserMenu();
 
+                    if (setting === "Dashboard") {
+                      navigate("/");   // 👈 Go to home page
+                    }
+
                     if (setting === "Account") {
                       navigate("/login");
                     }
 
                     if (setting === "Logout") {
                       localStorage.removeItem("isLoggedin");
-                      setLoggedIn(false);   // ✅ important
+                      setLoggedIn(false);
                       navigate("/");
                     }
                   }}

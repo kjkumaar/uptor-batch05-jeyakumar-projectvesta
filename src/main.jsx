@@ -10,7 +10,7 @@ import { ThemeProvider } from './Component/Themecontext.jsx';
 import { LoginProvider } from './Component/LoginContext.jsx';
 
 createRoot(document.getElementById('root')).render(
-  <React.StrictMode>   {/* ✅ use React.StrictMode */}
+  <React.StrictMode>   
     <BrowserRouter>
       <Provider store={store}>
         <LoginProvider>

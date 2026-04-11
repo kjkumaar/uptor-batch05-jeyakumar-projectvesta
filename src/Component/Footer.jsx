@@ -9,7 +9,7 @@ export default function Footer() {
     <footer
       style={{
         width: "100vw",
-        marginLeft: "calc(50% - 50vw)",   // removes container limit
+        marginLeft: "calc(50% - 50vw)",   
         backgroundColor: "#0d47a1",
         color: "white",
         padding: "40px 0",
